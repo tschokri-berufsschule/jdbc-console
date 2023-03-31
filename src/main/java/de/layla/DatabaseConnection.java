@@ -6,10 +6,11 @@ import java.sql.SQLException;
 
 
 public class DatabaseConnection {
+
+    private final String url = "jdbc:mysql://localhost/versand?";
     
     public Connection connect(String user, String password) {
         try {
-            String url = "jdbc:mysql://localhost/versand?";
             Connection connection = DriverManager.getConnection(url, user, password);
             return connection;
         } catch (SQLException e) {
@@ -21,7 +22,6 @@ public class DatabaseConnection {
         try {
             String user = "root";
             String password = "";
-            String url = "jdbc:mysql://localhost/versand?";
             Connection connection = DriverManager.getConnection(url, user, password);
             return connection;
         } catch (SQLException e) {
