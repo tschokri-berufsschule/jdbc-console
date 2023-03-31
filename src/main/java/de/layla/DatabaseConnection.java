@@ -11,8 +11,7 @@ public class DatabaseConnection {
     
     public Connection connect(String user, String password) {
         try {
-            Connection connection = DriverManager.getConnection(url, user, password);
-            return connection;
+            return DriverManager.getConnection(url, user, password);
         } catch (SQLException e) {
             return null;
         }
@@ -22,8 +21,7 @@ public class DatabaseConnection {
         try {
             String user = "root";
             String password = "";
-            Connection connection = DriverManager.getConnection(url, user, password);
-            return connection;
+            return DriverManager.getConnection(url, user, password);
         } catch (SQLException e) {
             return null;
         }
